@@ -28,9 +28,9 @@ Scenario: API should return a version element
 
 # and also verifying the href element
 @Elements
-Scenario: API should return a href element
+Scenario: API should return an href element
 	When I get the API response
-	Then the API should return a href of 'http://www.recipepuppy.com/'
+	Then the API should return an href of 'http://www.recipepuppy.com/'
 
 
 # now that we know all the expected element pieces are there, we can start dissecting the possible query options;
@@ -130,7 +130,7 @@ Scenario: API should return valid results for ingredients that contain spaces
 
 
 # we could extend the scenarios here to test combinations of how the API should handle ingredients with special characters, 
-# and are the ingredients supposed to be returned in alpahetically order, etc.
+# are the ingredients supposed to be returned in alphabetical order, etc.
 
 
 # one of the other remaining parameters we still need to test is how the API handles paging all the results;

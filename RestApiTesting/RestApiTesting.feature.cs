@@ -119,11 +119,11 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("API should return a href element", new string[] {
+        [TechTalk.SpecRun.ScenarioAttribute("API should return an href element", new string[] {
                 "Elements"}, SourceLine=30)]
-        public virtual void APIShouldReturnAHrefElement()
+        public virtual void APIShouldReturnAnHrefElement()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("API should return a href element", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("API should return an href element", null, new string[] {
                         "Elements"});
 #line 31
 this.ScenarioInitialize(scenarioInfo);
@@ -131,7 +131,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 32
  testRunner.When("I get the API response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 33
- testRunner.Then("the API should return a href of \'http://www.recipepuppy.com/\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the API should return an href of \'http://www.recipepuppy.com/\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

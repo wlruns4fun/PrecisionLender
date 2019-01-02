@@ -99,7 +99,7 @@ namespace RestApiTesting
             Assert.IsNull(response); // TODO: need to refactor this error verification to check response status in header, but should be OK for this exercise
         }
 
-        [Then("(?:the API|it) should return a (.*) (?:element |)of '(.*)'")]
+        [Then("(?:the API|it) should return (?:a|an) (.*) (?:element |)of '(.*)'")]
         public void VerifyElement(String elementName, String expectedValue)
         {
             if (response == null)
@@ -109,7 +109,6 @@ namespace RestApiTesting
             else
             {
                 String actualValue = (String)response[elementName];
-
                 Assert.AreEqual(expectedValue, actualValue);
             }
         }
@@ -213,7 +212,6 @@ namespace RestApiTesting
                 {
                     bool doesRecipeTitleContainValue = DoesRecipeTitleContainValue(recipe, value);
                     bool doRecipeIngredientsContainValue = DoRecipeIngredientsContainValue(recipe, value);
-
                     Assert.IsTrue(doesRecipeTitleContainValue || doRecipeIngredientsContainValue); // value could be in the title or ingredients
                 }
             }
@@ -238,7 +236,6 @@ namespace RestApiTesting
                 foreach (JObject recipe in results)
                 {
                     bool doRecipeIngredientsContainValue = DoRecipeIngredientsContainValue(recipe, value);
-
                     Assert.IsTrue(doRecipeIngredientsContainValue);
                 }
             }
